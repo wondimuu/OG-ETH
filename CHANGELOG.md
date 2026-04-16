@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.0.6] - 2026-04-15 15:50:00
+
+### Added
+
+- Updates connections to API calls to the World Bank, IMF, and UN in `macro_params.py` and `calibrate.py` to allow for updating the exogenous parameters from the APIs. This is currently set to `False` by default, but can be set to `True` to update the parameters from the APIs when running the `calibrate.py` script. The documentation in `exogenous_parameters.md` has also been updated to reflect this change.
+- Updates how the SAM file is loaded in `input_output.py`
+- Adds an `update_baseline.py` script that updates the default parameters in `ogeth_default_parameters.json` based on the output of the `calibrate.py` script. This allows us to easily update the default parameters in the JSON file when we run the calibration script.
+
 ## [0.0.5] - 2025-11-17 23:40:00
 
 ### Added
@@ -54,6 +62,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - This version is a pre-release alpha. The example run script OG-ETH/examples/run_og_eth.py runs, but the model is not currently calibrated to represent the Ethiopian economy and population.
 
 
+[0.0.6]: https://github.com/EAPD-DRB/OG-ETH/compare/v0.0.5...v0.0.6
 [0.0.5]: https://github.com/EAPD-DRB/OG-ETH/compare/v0.0.4...v0.0.5
 [0.0.4]: https://github.com/EAPD-DRB/OG-ETH/compare/v0.0.3...v0.0.4
 [0.0.3]: https://github.com/EAPD-DRB/OG-ETH/compare/v0.0.2...v0.0.3
