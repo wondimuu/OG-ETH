@@ -69,7 +69,7 @@ For the May 11-15, 2026 United Nations `OG-ETH` training in Addis Ababa, Ethiopi
 
 ### Other materials:
 
-  * [Slides from the 2-day workshop in August, 2024](https://eapd-drb.github.io/og-model/indonesia/)
+  * [Slides from the 2-day workshop in November, 2025](https://eapd-drb.github.io/og-model/ethiopia/)
   * [UN OG Online Training Materials](https://eapd-drb.github.io/UN-OG-Training/)
 
 (Sec_UNtutor_python)=
