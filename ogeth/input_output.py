@@ -59,13 +59,24 @@ def get_alpha_c(sam=None, cons_dict=CONS_DICT):
         sam = read_SAM()
     if sam is None:
         raise RuntimeError("SAM data is unavailable. Cannot compute alpha_c.")
+
+    hh_cols = [
+        "hhd-r1",
+        "hhd-r2",
+        "hhd-r3",
+        "hhd-r4",
+        "hhd-r5",
+        "hhd-u1",
+        "hhd-u2",
+        "hhd-u3",
+        "hhd-u4",
+        "hhd-u5",
+    ]
     alpha_c = {}
     overall_sum = 0
     for key, value in cons_dict.items():
-        # note the subtraction of the row to focus on domestic consumption
         category_total = (
-            sam.loc[sam.index.isin(value), "total"].sum()
-            - sam.loc[sam.index.isin(value), "row"].sum()
+            sam.loc[sam.index.isin(value), hh_cols].values.astype(float).sum()
         )
         alpha_c[key] = category_total
         overall_sum += category_total
