@@ -45,11 +45,6 @@ def main():
         output_base=base_dir,
     )
     # Update parameters for baseline from default json file
-    # with (
-    #     files("ogeth")
-    #     .joinpath("ogeth_default_parameters.json")
-    #     .open("r") as file
-    # ):
     with (
         files("ogeth")
         .joinpath("ogeth_default_parameters.json")
